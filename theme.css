@@ -14,9 +14,10 @@
     so you can use what you set over and over without having
     to rewrite it multiple times.
     */
+}
 
+.theme-dark {
   /* Credit: https://github.com/folke/tokyonight.nvim/blob/main/lua/tokyonight/colors.lua */
-
   --bg_dark2_x: 18, 18, 24;
   --bg_dark2: rgb(var(--bg_dark2_x));
   --bg_dark_x: 22, 22, 30;
@@ -33,8 +34,6 @@
   --fg: rgb(var(--fg_x));
   --fg_dark_x: 169, 177, 214;
   --fg_dark: rgb(var(--fg_dark_x));
-  --fg_gutter_x: 59, 66, 97;
-  --fg_gutter: rgb(var(--fg_gutter_x));
   --comment_x: 86, 95, 137;
   --comment: rgb(var(--comment_x));
   --blue0_x: 61, 89, 161;
@@ -45,8 +44,6 @@
   --cyan: rgb(var(--cyan_x));
   --magenta_x: 187, 154, 247;
   --magenta: rgb(var(--magenta_x));
-  --magenta2_x: 255, 0, 124;
-  --magenta2: rgb(var(--magenta2_x));
   --purple_x: 157, 124, 21;
   --purple: rgb(var(--purple_x));
   --orange_x: 255, 158, 100;
@@ -64,10 +61,52 @@
   --unknown: #ffffff;
 }
 
-body {
+.theme-light {
+  --bg_dark2_x: 188, 189, 194;
+  --bg_dark2: rgb(var(--bg_dark2_x));
+  --bg_dark_x: 203, 204, 209;
+  --bg_dark: rgb(var(--bg_dark_x));
+  --bg_x: 213, 214, 219;
+  --bg: rgb(var(--bg_x));
+  --bg_highlight_x: 220, 222, 226;
+  --bg_highlight: rgb(var(--bg_highlight_x));
+  --bg_highlight_dark_x: 195, 197, 201;
+  --bg_highlight_dark: rgb(var(--bg_highlight_dark_x));
+  --terminal_black_x: 15, 15, 20;
+  --terminal_black: rgb(var(--terminal_black_x));
+  --fg_x: 52, 59, 88;
+  --fg: rgb(var(--fg_x));
+  --fg_dark_x: 39, 46, 75;
+  --fg_dark: rgb(var(--fg_dark_x));
+  --comment_x: 150, 153, 163;
+  --comment: rgb(var(--comment_x));
+  --blue0_x: 39, 71, 125;
+  --blue0: rgb(var(--blue0_x));
+  --blue_x: 52, 84, 138;
+  --blue: rgb(var(--blue_x));
+  --cyan_x: 15, 75, 110;
+  --cyan: rgb(var(--cyan_x));
+  --magenta_x: 90, 74, 120;
+  --magenta: rgb(var(--magenta_x));
+  --purple_x: 65, 49, 95;
+  --purple: rgb(var(--purple_x));
+  --orange_x: 150, 80, 39;
+  --orange: rgb(var(--orange_x));
+  --yellow_x: 143, 94, 21;
+  --yellow: rgb(var(--yellow_x));
+  --green_x: 51, 99, 92;
+  --green: rgb(var(--green_x));
+  --teal_x: 22, 103, 117;
+  --teal: rgb(var(--teal_x));
+  --red_x: 140, 67, 81;
+  --red: rgb(var(--red_x));
+  --red1_x: 115, 42, 56;
+  --red1: rgb(var(--red1_x));
+  --unknown: #000000;
 }
 
-.theme-dark {
+.theme-dark,
+.theme-light {
   --color_red_rgb: var(--red_x);
   --color-red: var(--red);
   --color_purple_rgb: var(--purple_x);
@@ -190,4 +229,9 @@ body {
 }
 ::-webkit-scrollbar:horizontal {
   height: 0;
+}
+
+/* for vim */
+.ͼ2 .cm-panels-bottom {
+  border-top: 1px solid var(--bg_highlight);
 }

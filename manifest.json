@@ -1,8 +1,6 @@
 {
-   "name": "My Theme",
-   "version": "3.301",
-   "minAppVersion": "1.1.8",
-   "author": "yourname",
-   "fundingUrl": "https://ko-fi.com/yourname",
-   "authorUrl": "https://yoururl"
+  "name": "Tokyo Night",
+  "version": "0.0.1",
+  "minAppVersion": "0.0.1",
+  "author": "tcmmichaelb139"
 }

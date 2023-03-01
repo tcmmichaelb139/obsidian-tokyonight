@@ -5,6 +5,7 @@
     it will go down the list until it finds on that is.
     */
 
+  --default-font: "JetBrains Mono", monospace;
   --default-font: "Inter", sans-serif; /*Note and Settings Text*/
   --font-monospace: "JetBrains Mono", monospace; /*Code block text*/
   --font-monospace: "Source Code Pro", monospace; /*Code block text*/

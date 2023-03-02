@@ -154,7 +154,7 @@
   --background-modifier-form-field-highlighted: var(--bg_dark);
   --background-modifier-box-shadow: rgba(0, 0, 0, 0.3);
   --background-modifier-success: var(--green);
-  --background-modifier-error: rgba(var(--red_x), 0.5);
+  --background-modifier-error: rgba(var(--red_x), 0.8);
   --background-modifier-error-hover: var(--red);
   --background-modifier-cover: rgba(var(--bg_dark_x), 0.8);
   --background-modifier-hover: var(--bg_highlight);
@@ -190,8 +190,8 @@
 
   --titlebar-text-color-focused: var(--magenta);
 
-  --bold-color: var(--yellow);
-  --italic-color: var(--yellow);
+  --bold-color: inherit;
+  --italic-color: inherit;
 
   --checkbox-color: var(--comment);
   --checkbox-color-hover: var(--comment);
@@ -222,6 +222,7 @@
   --nav-item-color-active: var(--red);
   --nav-item-background-active: var(--bg_highlight);
   --nav-file-tag: rgba(var(--yellow_x), 0.9);
+  --nav-indentation-guide-color: var(--bg_highlight);
 
   --graph-line: var(--comment);
   --graph-node: var(--fg);
@@ -249,3 +250,13 @@
 .ͼ2 .cm-panels-bottom {
   border-top: 1px solid var(--bg_highlight);
 }
+
+/* kanban */
+.kanban-plugin__lane-action-add {
+  color: var(--fg);
+}
+
+/* .kanban-plugin__autocomplete-item-active, */
+/* .kanban-plugin__ignore-click-outside { */
+/*   background-color: var(--bg_highlight); */
+/* } */

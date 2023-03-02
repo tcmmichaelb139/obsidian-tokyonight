@@ -18,6 +18,13 @@
 }
 
 .theme-dark {
+  /* --accent-h: 261; /* magenta */
+  /* --accent-s: 85%; */
+  /* --accent-l: 79%; */
+  --accent-h: 202; /* cyan */
+  --accent-s: 100%;
+  --accent-l: 75%;
+
   /* Credit: https://github.com/folke/tokyonight.nvim/blob/main/lua/tokyonight/colors.lua */
   --bg_dark2_x: 18, 18, 24;
   --bg_dark2: rgb(var(--bg_dark2_x));
@@ -41,6 +48,7 @@
   --blue0: rgb(var(--blue0_x));
   --blue_x: 122, 162, 247;
   --blue: rgb(var(--blue_x));
+  --cyan_hsl: 202 100% 75%;
   --cyan_x: 125, 207, 255;
   --cyan: rgb(var(--cyan_x));
   --magent_hsl: 261 85% 79%;
@@ -64,6 +72,13 @@
 }
 
 .theme-light {
+  /* --accent-h: 261; /* magenta */
+  /* --accent-s: 24%; */
+  /* --accent-l: 38%; */
+  --accent-h: 202; /* cyan */
+  --accent-s: 86%;
+  --accent-l: 43%;
+
   --bg_dark2_x: 188, 189, 194;
   --bg_dark2: rgb(var(--bg_dark2_x));
   --bg_dark_x: 203, 204, 209;
@@ -126,8 +141,6 @@
   --color-orange: var(--orange);
   --color_pink_rgb: var(--magenta_x);
   --color-pink: var(--magenta);
-  --color-accent: var(--magenta);
-  --color-accent-hsl: var(--magenta_hsl);
 
   --background-primary: var(--bg);
   --background-primary-alt: var(--bg);
@@ -157,9 +170,6 @@
   --h5-color: var(--blue);
   --h6-color: var(--magenta);
 
-  --text-accent: rgba(var(--blue_x), 0.9);
-  --text-accent-hover: var(--blue);
-
   --tag-color: var(--magenta);
   --tag-background: rgba(var(--magenta_x), 0.15);
 
@@ -173,8 +183,6 @@
   --text-on-accent: var(--bg);
   --interactive-normal: var(--bg_dark);
   --interactive-hover: var(--bg);
-  --interactive-accent: var(--magenta);
-  --interactive-accent-hover: var(--magenta);
   --interactive-success: var(--green);
 
   --text-highlight-bg: rgba(var(--orange_x), 0.4);

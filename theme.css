@@ -43,6 +43,7 @@
   --blue: rgb(var(--blue_x));
   --cyan_x: 125, 207, 255;
   --cyan: rgb(var(--cyan_x));
+  --magent_hsl: 261 85% 79%;
   --magenta_x: 187, 154, 247;
   --magenta: rgb(var(--magenta_x));
   --purple_x: 157, 124, 21;
@@ -87,6 +88,7 @@
   --blue: rgb(var(--blue_x));
   --cyan_x: 15, 75, 110;
   --cyan: rgb(var(--cyan_x));
+  --magent_hsl: 261 24% 38%;
   --magenta_x: 90, 74, 120;
   --magenta: rgb(var(--magenta_x));
   --purple_x: 65, 49, 95;
@@ -125,6 +127,7 @@
   --color_pink_rgb: var(--magenta_x);
   --color-pink: var(--magenta);
   --color-accent: var(--magenta);
+  --color-accent-hsl: var(--magenta_hsl);
 
   --background-primary: var(--bg);
   --background-primary-alt: var(--bg);

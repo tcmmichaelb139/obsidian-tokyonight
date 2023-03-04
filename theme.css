@@ -255,6 +255,12 @@
   padding-right: 0;
 }
 
+/* notice */
+.notice {
+  background-color: var(--bg_dark);
+  border: 2px solid var(--bg_highlight);
+}
+
 /* callouts */
 .callout[data-callout="quote"],
 .callout[data-callout="cite"] {

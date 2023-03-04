@@ -224,6 +224,8 @@
   --nav-file-tag: rgba(var(--yellow_x), 0.9);
   --nav-indentation-guide-color: var(--bg_highlight);
 
+  --indentation-guide-color: var(--bg_highlight);
+
   --graph-line: var(--comment);
   --graph-node: var(--fg);
   --graph-node-tag: var(--orange);
@@ -256,7 +258,6 @@
   color: var(--fg);
 }
 
-/* .kanban-plugin__autocomplete-item-active, */
-/* .kanban-plugin__ignore-click-outside { */
-/*   background-color: var(--bg_highlight); */
-/* } */
+.kanban-plugin__lane-action-add:hover {
+  color: var(--bg);
+}

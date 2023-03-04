@@ -239,7 +239,6 @@
   --slider-track-background: var(--bg_highlight);
 
   --blockquote-background-color: var(--bg_dark);
-  --callout-quote: var(--bg_highlight_dark);
 }
 
 ::-webkit-scrollbar {
@@ -247,6 +246,12 @@
 }
 ::-webkit-scrollbar:horizontal {
   height: 0;
+}
+
+/* callouts */
+.callout[data-callout="quote"],
+.callout[data-callout="cite"] {
+  background-color: rgba(var(--bg_highlight_dark_x), 0.5);
 }
 
 /* for vim */

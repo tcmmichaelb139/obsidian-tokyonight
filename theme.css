@@ -249,6 +249,12 @@
   height: 0;
 }
 
+/* links */
+.external-link {
+  background-image: none;
+  padding-right: 0;
+}
+
 /* callouts */
 .callout[data-callout="quote"],
 .callout[data-callout="cite"] {

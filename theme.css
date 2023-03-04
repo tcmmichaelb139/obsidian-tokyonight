@@ -230,7 +230,8 @@
   --nav-file-tag: rgba(var(--yellow_x), 0.9);
   --nav-indentation-guide-color: var(--bg_highlight);
 
-  --indentation-guide-color: var(--bg_highlight);
+  --indentation-guide-color: var(--comment);
+  --indentation-guide-color-active: var(--comment);
 
   --graph-line: var(--comment);
   --graph-node: var(--fg);
@@ -290,6 +291,7 @@ span.cm-formatting.cm-formatting-link-string.cm-string.cm-url.external-link {
 .various-complements__suggestion-item::before {
   filter: var(--external-link-filter);
 }
+
 .various-complements__footer::before {
   filter: var(--external-link-filter);
 }

@@ -69,6 +69,9 @@
   --red1_x: 219, 75, 75;
   --red1: rgb(var(--red1_x));
   --unknown: #ffffff;
+
+  --external-link-filter: invert(35%) sepia(28%) saturate(681%)
+    hue-rotate(192deg) brightness(94%) contrast(85%);
 }
 
 .theme-light {
@@ -121,6 +124,9 @@
   --red1_x: 115, 42, 56;
   --red1: rgb(var(--red1_x));
   --unknown: #000000;
+
+  --external-link-filter: invert(62%) sepia(9%) saturate(266%)
+    hue-rotate(189deg) brightness(97%) contrast(88%);
 }
 
 .theme-dark,
@@ -250,9 +256,8 @@
 }
 
 /* links */
-.external-link {
-  background-image: none;
-  padding-right: 0;
+span.cm-formatting.cm-formatting-link-string.cm-string.cm-url.external-link {
+  filter: var(--external-link-filter);
 }
 
 /* notice */
@@ -279,4 +284,12 @@
 
 .kanban-plugin__lane-action-add:hover {
   color: var(--bg);
+}
+
+/* various-complement */
+.various-complements__suggestion-item::before {
+  filter: var(--external-link-filter);
+}
+.various-complements__footer::before {
+  filter: var(--external-link-filter);
 }

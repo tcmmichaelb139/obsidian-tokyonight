@@ -239,6 +239,7 @@
   --slider-track-background: var(--bg_highlight);
 
   --blockquote-background-color: var(--bg_dark);
+  --callout-quote: var(--bg_highlight_dark);
 }
 
 ::-webkit-scrollbar {

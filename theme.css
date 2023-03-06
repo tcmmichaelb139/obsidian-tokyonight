@@ -164,6 +164,7 @@
   --background-modifier-error-hover: var(--red);
   --background-modifier-cover: rgba(var(--bg_dark_x), 0.8);
   --background-modifier-hover: var(--bg_highlight);
+  --background-modifier-message: rgba(var(--bg_highlight_x), 0.8);
 
   --text-normal: var(--fg);
   --text-faint: var(--comment);
@@ -260,12 +261,16 @@
 }
 
 /* scrollbars */
-
 ::-webkit-scrollbar {
   width: 0;
 }
 ::-webkit-scrollbar:horizontal {
   height: 0;
+}
+
+/* tooltip */
+.tooltip {
+  color: var(--fg);
 }
 
 /* links */

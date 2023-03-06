@@ -245,9 +245,21 @@
   --prompt-border-color: var(--bg_highlight);
   --slider-track-background: var(--bg_highlight);
 
+  --border-width: 2px;
+
   --blockquote-background-color: var(--bg_dark);
   --callout-quote: var(--fg_dark);
+
+  --embed-background: var(--bg_dark);
+  --embed-padding: 1.5rem 1.5rem 0.5rem;
 }
+
+/* mobile */
+.is-mobile .suggestion-item.is-selected {
+  background-color: var(--bg_highlight);
+}
+
+/* scrollbars */
 
 ::-webkit-scrollbar {
   width: 0;
@@ -275,7 +287,7 @@ span.cm-formatting.cm-formatting-link-string.cm-string.cm-url.external-link {
 
 /* for vim */
 .ͼ2 .cm-panels-bottom {
-  border-top: 1px solid var(--bg_highlight);
+  border-top: var(--border-width) solid var(--bg_highlight);
 }
 
 /* kanban */

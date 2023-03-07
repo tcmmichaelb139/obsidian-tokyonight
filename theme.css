@@ -164,7 +164,7 @@
   --background-modifier-error-hover: var(--red);
   --background-modifier-cover: rgba(var(--bg_dark_x), 0.8);
   --background-modifier-hover: var(--bg_highlight);
-  --background-modifier-message: rgba(var(--bg_highlight_x), 0.8);
+  --background-modifier-message: rgba(var(--bg_highlight_x), 0.9);
 
   --text-normal: var(--fg);
   --text-faint: var(--comment);
@@ -197,8 +197,8 @@
 
   --titlebar-text-color-focused: var(--magenta);
 
-  --bold-color: inherit;
-  --italic-color: inherit;
+  --bold-color: hsl(var(--accent-h), var(--accent-s), var(--accent-l));
+  --italic-color: hsl(var(--accent-h), var(--accent-s), var(--accent-l));
 
   --checkbox-color: var(--comment);
   --checkbox-color-hover: var(--comment);
@@ -302,6 +302,12 @@ span.cm-formatting.cm-formatting-link-string.cm-string.cm-url.external-link {
 
 .kanban-plugin__lane-action-add:hover {
   color: var(--bg);
+}
+
+.kanban-plugin__autocomplete-item:hover,
+.kanban-plugin__autocomplete-item-active {
+  color: hsl(var(--accent-h), var(--accent-s), var(--accent-l));
+  background-color: var(--bg_highlight);
 }
 
 /* various-complement */

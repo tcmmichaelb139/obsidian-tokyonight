@@ -322,3 +322,8 @@ a.external-link {
 .various-complements__footer::before {
   filter: var(--external-link-filter);
 }
+
+/* Math Jax */
+mjx-math {
+  font-size: 120% !important;
+}

@@ -299,6 +299,10 @@ a.external-link {
   border-top: var(--border-width) solid var(--bg_highlight);
 }
 
+.cm-vim-message {
+  color: var(--red);
+}
+
 /* kanban */
 .kanban-plugin__lane-action-add {
   color: var(--fg);
@@ -326,4 +330,12 @@ a.external-link {
 /* Math Jax */
 mjx-math {
   font-size: 110% !important;
+}
+
+/* metadata */
+.cm-atom {
+  color: var(--blue);
+}
+.cm-meta {
+  color: rgba(var(--blue0_x), 0.9);
 }

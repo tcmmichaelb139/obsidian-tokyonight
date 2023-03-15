@@ -338,6 +338,6 @@ mjx-math {
 .cm-atom {
   color: var(--blue);
 }
-.cm-meta {
+span.cm-hmd-frontmatter.cm-meta {
   color: rgba(var(--blue0_x), 0.9);
 }

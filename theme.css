@@ -280,10 +280,6 @@ span.cm-formatting.cm-formatting-link-string.cm-string.cm-url.external-link {
   filter: var(--external-link-filter);
 }
 
-a.external-link {
-  filter: var(--external-link-filter);
-}
-
 /* notice */
 .notice {
   background-color: var(--bg_dark);

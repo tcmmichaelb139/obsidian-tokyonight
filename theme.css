@@ -72,6 +72,8 @@
 
   --external-link-filter: invert(35%) sepia(28%) saturate(681%)
     hue-rotate(192deg) brightness(94%) contrast(85%);
+  --link-external-filter: invert(35%) sepia(28%) saturate(681%)
+    hue-rotate(192deg) brightness(94%) contrast(85%);
 }
 
 .theme-light {
@@ -126,6 +128,8 @@
   --unknown: #000000;
 
   --external-link-filter: invert(62%) sepia(9%) saturate(266%)
+    hue-rotate(189deg) brightness(97%) contrast(88%);
+  --link-external-filter: invert(62%) sepia(9%) saturate(266%)
     hue-rotate(189deg) brightness(97%) contrast(88%);
 }
 

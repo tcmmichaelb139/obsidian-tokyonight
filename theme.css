@@ -280,16 +280,13 @@
 }
 
 /* links */
-span.cm-formatting.cm-formatting-link-string.cm-list-1.cm-string.cm-url.external-link {
-  filter: var(--external-link-filter);
+
+.cm-url {
+  filter: none !important;
 }
 
-span.cm-formatting.cm-formatting-link-string.cm-list-1.cm-string.cm-url {
-  filter: none;
-}
-
-span.cm-list-1.cm-string.cm-url {
-  filter: none;
+.cm-string.cm-url.external-link {
+  filter: var(--external-link-filter) !important;
 }
 
 a.external-link {

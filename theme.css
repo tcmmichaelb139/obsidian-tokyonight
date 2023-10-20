@@ -259,6 +259,10 @@
   --embed-padding: 1.5rem 1.5rem 0.5rem;
 
   --canvas-color: var(--bg_highlight_x);
+
+  --toggle-thumb-color: var(--fg_dark);
+
+  --link-color-hover: hsl(var(--accent-h), var(--accent-s), var(--accent-l));
 }
 
 /* mobile */

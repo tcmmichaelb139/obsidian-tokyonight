@@ -25,7 +25,6 @@
   --accent-s: 100%;
   --accent-l: 75%;
 
-  /* Credit: https://github.com/folke/tokyonight.nvim/blob/main/lua/tokyonight/colors.lua */
   --bg_dark2_x: 18, 18, 24;
   --bg_dark2: rgb(var(--bg_dark2_x));
   --bg_dark_x: 22, 22, 30;
@@ -170,6 +169,8 @@
   --background-modifier-hover: var(--bg_highlight);
   --background-modifier-message: rgba(var(--bg_highlight_x), 0.9);
 
+  --border-width: 2px;
+
   --text-normal: var(--fg);
   --text-faint: var(--comment);
   --text-muted: var(--fg_dark);
@@ -183,7 +184,13 @@
 
   --tag-color: var(--magenta);
   --tag-background: rgba(var(--magenta_x), 0.15);
+  --tag-color-hover: var(--cyan);
+  --tag-background-hover: rgba(var(--cyan_x), 0.15);
 
+  --link-color: var(--magenta);
+  --link-color-hover: var(--cyan);
+  --link-external-color: var(--magenta);
+  --link-external-color-hover: var(--cyan);
   --titlebar-text-color-focused: var(--magenta);
 
   --inline-title-color: var(--magenta);
@@ -225,7 +232,7 @@
   --mermaid-actor: var(--fg_dark);
   --mermaid-loopline: var(--blue);
 
-  --icon-color-hover: var(--yellow);
+  --icon-color-hover: var(--cyan);
   --icon-color-focused: var(--blue);
 
   --nav-item-color-hover: var(--fg);
@@ -250,7 +257,6 @@
   --prompt-border-color: var(--bg_highlight);
   --slider-track-background: var(--bg_highlight);
 
-  --border-width: 2px;
 
   --blockquote-background-color: var(--bg_dark);
   --callout-quote: var(--fg_dark);
@@ -260,9 +266,7 @@
 
   --canvas-color: var(--bg_highlight_x);
 
-  --toggle-thumb-color: var(--fg_dark);
-
-  --link-color-hover: hsl(var(--accent-h), var(--accent-s), var(--accent-l));
+  --toggle-thumb-color: var(--fg);
 }
 
 /* mobile */

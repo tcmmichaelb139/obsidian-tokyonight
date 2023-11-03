@@ -5,10 +5,8 @@
     it will go down the list until it finds on that is.
     */
 
-  --default-font: "JetBrains Mono", monospace;
-  --default-font: "Inter", sans-serif; /*Note and Settings Text*/
-  --font-monospace: "JetBrains Mono", monospace; /*Code block text*/
-  --font-monospace: "Source Code Pro", monospace; /*Code block text*/
+  --default-font: '"JetBrains Mono", monospace, "Inter", sans-serif';
+  --font-monospace: '"JetBrains Mono", monospace, "Source Code Pro", monospace'; /*Code block text*/
 
   /*
     var(--variableName); is a variable,
@@ -163,17 +161,36 @@
   --background-modifier-form-field-highlighted: var(--bg_dark);
   --background-modifier-box-shadow: rgba(0, 0, 0, 0.3);
   --background-modifier-success: var(--green);
-  --background-modifier-error: rgba(var(--red_x), 0.8);
+  --background-modifier-error: var(--red_1);
   --background-modifier-error-hover: var(--red);
   --background-modifier-cover: rgba(var(--bg_dark_x), 0.8);
   --background-modifier-hover: var(--bg_highlight);
   --background-modifier-message: rgba(var(--bg_highlight_x), 0.9);
-
-  --border-width: 2px;
+  --background-modifier-active-hover: var(--bg_highlight);
 
   --text-normal: var(--fg);
   --text-faint: var(--comment);
   --text-muted: var(--fg_dark);
+  --text-error: var(--red);
+  --text-accent: var(--magenta);
+  --text-accent-hover: var(--cyan);
+  --text-error: var(--red1);
+  --text-error-hover: var(--red);
+  --text-selection: var(--unknown);
+  --text-on-accent: var(--bg);
+  --text-highlight-bg: rgba(var(--orange_x), 0.4);
+  --text-selection: rgba(var(--blue0_x), 0.6);
+
+  --interactive-normal: var(--bg_dark);
+  --interactive-hover: var(--bg);
+  --interactive-success: var(--green);
+  --interactive-accent: var(--cyan);
+  --interactive-accent-hover: var(--blue);
+
+  --scrollbar-bg: var(--bg_dark2);
+  --scrollbar-thumb-bg: var(--comment);
+  --scrollbar-active-thumb-bg: var(--bg_dark);
+  --scrollbar-width: 0px;
 
   --h1-color: var(--red);
   --h2-color: var(--yellow);
@@ -181,6 +198,8 @@
   --h4-color: var(--cyan);
   --h5-color: var(--blue);
   --h6-color: var(--magenta);
+
+  --border-width: 2px;
 
   --tag-color: var(--magenta);
   --tag-background: rgba(var(--magenta_x), 0.15);
@@ -194,19 +213,6 @@
   --titlebar-text-color-focused: var(--magenta);
 
   --inline-title-color: var(--magenta);
-
-  --text-error: var(--red1);
-  --text-error-hover: var(--red);
-  --text-selection: var(--unknown);
-  --text-on-accent: var(--bg);
-  --interactive-normal: var(--bg_dark);
-  --interactive-hover: var(--bg);
-  --interactive-success: var(--green);
-
-  --text-highlight-bg: rgba(var(--orange_x), 0.4);
-  --text-highlight-fg: var(--bg);
-
-  --titlebar-text-color-focused: var(--magenta);
 
   --bold-color: hsl(var(--accent-h), var(--accent-s), var(--accent-l));
   --italic-color: hsl(var(--accent-h), var(--accent-s), var(--accent-l));
@@ -222,7 +228,6 @@
   --table-row-alt-background: var(--bg_dark);
   --table-row-background-hover: var(--bg_dark2);
 
-  --text-selection: rgba(var(--blue0_x), 0.6);
   --flashing-background: rgba(var(--blue0_x), 0.3);
 
   --code-normal: var(--fg);
@@ -232,8 +237,9 @@
   --mermaid-actor: var(--fg_dark);
   --mermaid-loopline: var(--blue);
 
-  --icon-color-hover: var(--cyan);
-  --icon-color-focused: var(--blue);
+  --icon-color-hover: var(--blue);
+  --icon-color-focused: var(--magenta);
+  --icon-color-active: var(--magenta);
 
   --nav-item-color-hover: var(--fg);
   --nav-item-background-hover: var(--bg_highlight);
@@ -266,7 +272,7 @@
 
   --canvas-color: var(--bg_highlight_x);
 
-  --toggle-thumb-color: var(--fg);
+  --toggle-thumb-color: var(--bg);
 }
 
 /* mobile */
@@ -276,10 +282,11 @@
 
 /* scrollbars */
 ::-webkit-scrollbar {
-  width: 0;
+  width: var(--scrollbar-width);
 }
+
 ::-webkit-scrollbar:horizontal {
-  height: 0;
+  height: var(--scrollbar-width);
 }
 
 /* tooltip */
@@ -300,6 +307,7 @@
 a.external-link {
   filter: none;
   background-image: none;
+  padding-right: 0;
 }
 
 /* notice */
@@ -359,3 +367,381 @@ mjx-math {
 span.cm-hmd-frontmatter.cm-meta {
   color: rgba(var(--blue0_x), 0.9);
 }
+
+/* @settings
+
+name: TokyoNight
+id: TokyoNight
+settings:
+  - 
+    id: heading-fonts
+    title: Fonts
+    type: heading
+    level: 1
+    collapsed: true
+  - 
+    id: default-font
+    title: Base Font
+    type: variable-text
+    default: '"JetBrains Mono", monospace, "Inter", sans-serif'
+  - 
+    id: font-monospace
+    title: Monospace Font
+    description: Used for codeblocks, tables, etc.
+    type: variable-text
+    default: '"JetBrains Mono", monospace, "Source Code Pro", monospace'
+  - 
+    id: heading-translucency
+    title: Translucency
+    type: heading
+    level: 1
+    collapsed: true
+  -
+    id: opacity-translucency-light
+    title: Light Theme Translucency
+    type: variable-number-slider
+    default: 1
+    min: 0
+    max: 1
+    step: 0.01
+  -
+    id: opacity-translucency-dark
+    title: Dark Theme Translucency
+    type: variable-number-slider
+    default: 1
+    min: 0
+    max: 1
+    step: 0.01
+  
+  - 
+    id: heading-colors-background
+    title: Background Colors
+    type: heading
+    level: 1
+    collapsed: true
+  -
+    id: background-primary
+    title: Background Primary
+    type: variable-themed-color
+    opacity: false
+    format: rgb
+    default-light: 'rgb(213, 214, 219)'
+    default-dark: 'rgb(26, 27, 38)'
+  -
+    id: background-primary-alt
+    title: Background Primary (alt)
+    type: variable-themed-color
+    opacity: false
+    format: rgb
+    default-light: 'rgb(213, 214, 219)'
+    default-dark: 'rgb(26, 27, 38)'
+  -
+    id: background-secondary
+    title: Background Secondary
+    type: variable-themed-color
+    opacity: false
+    format: rgb
+    default-light: 'rgb(203, 204, 209)'
+    default-dark: 'rgb(22, 22, 30)'
+  -
+    id: background-secondary-alt
+    title: Background Secondary (alt)
+    type: variable-themed-color
+    opacity: false
+    format: rgb
+    default-light: 'rgb(203, 204, 209)'
+    default-dark: 'rgb(22, 22, 30)'
+  -
+    id: background-modifier-border
+    title: 'Background Modifier: Border'
+    type: variable-themed-color
+    opacity: true
+    format: rgba
+    default-light: 'rgba(220, 222, 226, 1)'
+    default-dark: 'rgba(41, 46, 66, 1)'
+  -
+    id: background-modifier-form-field
+    title: 'Background Modifier: Form Field'
+    type: variable-themed-color
+    opacity: true
+    format: rgba
+    default-light: 'rgba(203, 204, 209, 1)'
+    default-dark: 'rgba(22, 22, 30, 1)'
+  -
+    id: background-modifier-form-field-highlighted
+    title: 'Background Modifier: Form Field (highlighted)'
+    type: variable-themed-color
+    opacity: true
+    format: rgba
+    default-light: 'rgba(203, 204, 209, 1)'
+    default-dark: 'rgba(22, 22, 30, 1)'
+  -
+    id: background-modifier-box-shadow
+    title: 'Background Modifier: Box Shadow'
+    type: variable-themed-color
+    opacity: true
+    format: rgba
+    default-light: 'rgba(0, 0, 0, 0.3)'
+    default-dark: 'rgba(0, 0, 0, 0.3)'
+  -
+    id: background-modifier-success
+    title: 'Background Modifier: Success'
+    type: variable-themed-color
+    opacity: true
+    format: rgba
+    default-light: 'rgba(51, 99, 92, 1)'
+    default-dark: 'rgba(158, 206, 106, 1)'
+  -
+    id: background-modifier-error
+    title: 'Background Modifier: Error'
+    type: variable-themed-color
+    opacity: true
+    format: rgba
+    default-light: 'rgba(115, 42, 56, 1)'
+    default-dark: 'rgba(219, 75, 75, 1)'
+  -
+    id: background-modifier-error-hover
+    title: 'Background Modifier: Error (hover)'
+    type: variable-themed-color
+    opacity: true
+    format: rgba
+    default-light: 'rgba(140, 67, 81, 1)'
+    default-dark: 'rgba(255, 117, 127, 1)'
+  -
+    id: background-modifier-cover
+    title: 'Background Modifier: Cover'
+    type: variable-themed-color
+    opacity: true
+    format: rgba
+    default-light: 'rgba(203, 204, 209, 0.8)'
+    default-dark: 'rgba(22, 22, 30, 0.8)'
+  -
+    id: background-modifier-hover
+    title: 'Background Modifier: Hover'
+    type: variable-themed-color
+    opacity: true
+    format: rgba
+    default-light: 'rgba(220, 222, 226, 1)'
+    default-dark: 'rgba(41, 46, 66, 1)'
+  - 
+    id: heading-colors-text
+    title: Text Colors
+    type: heading
+    level: 1
+    collapsed: true
+  -
+    id: text-accent
+    title: 'Text: Accent'
+    type: variable-themed-color
+    opacity: false
+    format: rgb
+    default-light: 'rgb(90, 74, 120)'
+    default-dark: 'rgb(187, 154, 247)'
+  -
+    id: text-accent-hover
+    title: 'Text: Accent (hover)'
+    type: variable-themed-color
+    opacity: false
+    format: rgb
+    default-light: 'rgb(15, 75, 110)'
+    default-dark: 'rgb(125, 207, 255)'
+  -
+    id: text-normal
+    title: 'Text: Normal'
+    type: variable-themed-color
+    opacity: false
+    format: rgb
+    default-light: 'rgb(52, 59, 88)'
+    default-dark: 'rgb(192, 202, 245)'
+  -
+    id: text-muted
+    title: 'Text: Muted'
+    type: variable-themed-color
+    opacity: false
+    format: rgb
+    default-light: 'rgb(39, 46, 75)'
+    default-dark: 'rgb(169, 177, 214)'
+  -
+    id: text-faint
+    title: 'Text: Faint'
+    type: variable-themed-color
+    opacity: false
+    format: rgb
+    default-light: 'rgb(150, 153, 163)'
+    default-dark: 'rgb(86, 95, 137)'
+  -
+    id: text-error
+    title: 'Text: Error'
+    type: variable-themed-color
+    opacity: false
+    format: rgb
+    default-light: 'rgb(115, 42, 56)'
+    default-dark: 'rgb(219, 75, 75)'
+  -
+    id: text-error-hover
+    title: 'Text: Error Hover'
+    type: variable-themed-color
+    opacity: false
+    format: rgb
+    default-light: 'rgb(140, 67, 81)'
+    default-dark: 'rgb(255, 117, 127)'
+  -
+    id: text-highlight-bg
+    title: 'Text: Highlight Background'
+    type: variable-themed-color
+    opacity: true
+    format: rgba
+    default-light: 'rgba(150, 80, 39, 0.4)'
+    default-dark: 'rgba(255, 158, 100, 0.4)'
+  -
+    id: text-selection
+    title: 'Text: Selection Background'
+    type: variable-themed-color
+    opacity: true
+    format: rgba
+    default-light: 'rgba(39, 71, 125, 0.6)'
+    default-dark: 'rgba(61, 89, 161, 0.6)'
+  
+  - 
+    id: header-colors
+    title: Header Colors 
+    type: heading
+    level: 1
+    collapsed: true
+  - 
+    id: h1-color
+    title: 'H1 Color'
+    type: variable-themed-color
+    opacity: false
+    format: rgb
+    default-light: 'rgb(140, 67, 8)'
+    default-dark: 'rgb(255, 117, 127)'
+  - 
+    id: h2-color
+    title: 'H2 Color'
+    type: variable-themed-color
+    opacity: false
+    format: rgb
+    default-light: 'rgb(143, 94, 21)'
+    default-dark: 'rgb(224, 175, 104)' 
+  - 
+    id: h3-color
+    title: 'H3 Color'
+    type: variable-themed-color
+    opacity: false
+    format: rgb
+    default-light: 'rgb(51, 99, 92)'
+    default-dark: 'rgb(158, 206, 106)'
+  - 
+    id: h4-color
+    title: 'H4 Color'
+    type: variable-themed-color
+    opacity: false
+    format: rgb
+    default-light: 'rgb(15, 75, 110)'
+    default-dark: 'rgb(125, 207, 255)'
+  - 
+    id: h5-color
+    title: 'H5 Color'
+    type: variable-themed-color
+    opacity: false
+    format: rgb
+    default-light: 'rgb(52, 84, 138)'
+    default-dark: 'rgb(122, 162, 247)'
+  - 
+    id: h6-color
+    title: 'H6 Color'
+    type: variable-themed-color
+    opacity: false
+    format: rgb
+    default-light: 'rgb(90, 74, 120)'
+    default-dark: 'rgb(187, 154, 247)'
+
+  - 
+    id: heading-colors-interactive
+    title: Interactive Colors
+    type: heading
+    level: 1
+    collapsed: true
+  -
+    id: interactive-normal
+    title: 'Interactive: Normal'
+    type: variable-themed-color
+    opacity: false
+    format: rgb
+    default-light: 'rgb(203, 204, 209)'
+    default-dark: 'rgb(22, 22, 30)'
+  -
+    id: interactive-hover
+    title: 'Interactive: Hover'
+    type: variable-themed-color
+    opacity: false
+    format: rgb
+    default-light: 'rgb(213, 214, 219)'
+    default-dark: 'rgb(26, 27, 38)'
+  -
+    id: interactive-accent
+    title: 'Interactive: Accent'
+    type: variable-themed-color
+    opacity: false
+    format: rgb
+    default-light: 'rgb(15, 75, 110)'
+    default-dark: 'rgb(125, 207, 255)'
+
+  -
+    id: interactive-accent-hover
+    title: 'Interactive: Accent (hover)'
+    type: variable-themed-color
+    opacity: false
+    format: rgb
+    default-light: 'rgb(52, 84, 138)'
+    default-dark: 'rgb(122, 162, 247)'
+  -
+    id: interactive-success
+    title: 'Interactive: Success'
+    type: variable-themed-color
+    opacity: false
+    format: rgb
+    default-light: 'rgb(51, 99, 92)'
+    default-dark: 'rgb(158, 206, 106)'
+
+  - 
+    id: heading-scrollbar
+    title: Scrollbar
+    type: heading
+    level: 1
+    collapsed: true
+  -
+    id: scrollbar-bg
+    title: 'Scrollbar: Background'
+    type: variable-themed-color
+    opacity: true
+    format: rgba
+    default-light: 'rgba(188, 189, 194, 1)'
+    default-dark: 'rgba(18, 18, 24, 1)'
+  -
+    id: scrollbar-thumb-bg
+    title: 'Scrollbar: Thumb Background'
+    type: variable-themed-color
+    opacity: true
+    format: rgba
+    default-light: 'rgba(150, 153, 163, 1)'
+    default-dark: 'rgba(86, 95, 137, 1)'
+  -
+    id: scrollbar-active-thumb-bg
+    title: 'Scrollbar: Active Thumb Background'
+    type: variable-themed-color
+    opacity: true
+    format: rgba
+    default-light: 'rgba(203, 204, 209, 1)'
+    default-dark: 'rgba(22, 22, 30, 1)'
+  - 
+    id: scrollbar-width 
+    title: 'Scrollbar: Width'
+    type: variable-number-slider
+    default: 0 
+    min: 0 
+    max: 20 
+    step: 1 
+
+*/

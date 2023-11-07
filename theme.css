@@ -161,7 +161,7 @@
   --background-modifier-form-field-highlighted: var(--bg_dark);
   --background-modifier-box-shadow: rgba(0, 0, 0, 0.3);
   --background-modifier-success: var(--green);
-  --background-modifier-error: var(--red_1);
+  --background-modifier-error: var(--red1);
   --background-modifier-error-hover: var(--red);
   --background-modifier-cover: rgba(var(--bg_dark_x), 0.8);
   --background-modifier-hover: var(--bg_highlight);

@@ -186,7 +186,7 @@
   --interactive-normal: var(--bg_dark);
   --interactive-hover: var(--bg);
   --interactive-success: var(--green);
-  --interactive-accent: var(--cyan);
+  --interactive-accent: hsl(var(--accent-h), var(--accent-s), var(--accent-l));
   --interactive-accent-hover: var(--blue);
 
   --scrollbar-bg: var(--bg_dark2);

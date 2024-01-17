@@ -303,8 +303,16 @@
 
 a.external-link {
   filter: none;
-  background-image: none;
+  background-image: unset;
   padding-right: 0;
+}
+
+a.external-link::after {
+  content: url(public/images/874d8b8e340f75575caa.svg);
+  filter: var(--external-link-filter);
+  padding-left: 2.5px;
+  bottom: -1px;
+  position: relative;
 }
 
 /* notice */
@@ -894,8 +902,8 @@ settings:
     max: 20 
     step: 1 
   - 
-    id: miscellaneous
-    title: Miscellaneous
+    id: miscillaneous
+    title: Miscillaneous
     type: heading 
     level: 1 
     collapsed: true 

@@ -6,7 +6,8 @@
     */
 
   --default-font: '"JetBrains Mono", monospace, "Inter", sans-serif';
-  --font-monospace: '"JetBrains Mono", monospace, "Source Code Pro", monospace'; /*Code block text*/
+  --font-monospace: '"JetBrains Mono", monospace, "Source Code Pro", monospace';
+  /*Code block text*/
 
   /*
     var(--variableName); is a variable,
@@ -19,7 +20,8 @@
   /* --accent-h: 261; /* magenta */
   /* --accent-s: 85%; */
   /* --accent-l: 79%; */
-  --accent-h: 202; /* cyan */
+  /* cyan */
+  --accent-h: 202;
   --accent-s: 100%;
   --accent-l: 75%;
 
@@ -51,8 +53,6 @@
   --magent_hsl: 261 85% 79%;
   --magenta_x: 187, 154, 247;
   --magenta: rgb(var(--magenta_x));
-  --purple_x: 157, 124, 21;
-  --purple: rgb(var(--purple_x));
   --orange_x: 255, 158, 100;
   --orange: rgb(var(--orange_x));
   --yellow_x: 224, 175, 104;
@@ -67,17 +67,16 @@
   --red1: rgb(var(--red1_x));
   --unknown: #ffffff;
 
-  --external-link-filter: invert(35%) sepia(28%) saturate(681%)
-    hue-rotate(192deg) brightness(94%) contrast(85%);
-  --link-external-filter: invert(35%) sepia(28%) saturate(681%)
-    hue-rotate(192deg) brightness(94%) contrast(85%);
+  --external-link-filter: invert(35%) sepia(28%) saturate(681%) hue-rotate(192deg) brightness(94%) contrast(85%);
+  --link-external-filter: invert(35%) sepia(28%) saturate(681%) hue-rotate(192deg) brightness(94%) contrast(85%);
 }
 
 .theme-light {
   /* --accent-h: 261; /* magenta */
   /* --accent-s: 24%; */
   /* --accent-l: 38%; */
-  --accent-h: 202; /* cyan */
+  /* cyan */
+  --accent-h: 202;
   --accent-s: 86%;
   --accent-l: 43%;
 
@@ -108,8 +107,6 @@
   --magent_hsl: 261 24% 38%;
   --magenta_x: 90, 74, 120;
   --magenta: rgb(var(--magenta_x));
-  --purple_x: 65, 49, 95;
-  --purple: rgb(var(--purple_x));
   --orange_x: 150, 80, 39;
   --orange: rgb(var(--orange_x));
   --yellow_x: 143, 94, 21;
@@ -124,18 +121,16 @@
   --red1: rgb(var(--red1_x));
   --unknown: #000000;
 
-  --external-link-filter: invert(62%) sepia(9%) saturate(266%)
-    hue-rotate(189deg) brightness(97%) contrast(88%);
-  --link-external-filter: invert(62%) sepia(9%) saturate(266%)
-    hue-rotate(189deg) brightness(97%) contrast(88%);
+  --external-link-filter: invert(62%) sepia(9%) saturate(266%) hue-rotate(189deg) brightness(97%) contrast(88%);
+  --link-external-filter: invert(62%) sepia(9%) saturate(266%) hue-rotate(189deg) brightness(97%) contrast(88%);
 }
 
 .theme-dark,
 .theme-light {
   --color_red_rgb: var(--red_x);
   --color-red: var(--red);
-  --color_purple_rgb: var(--purple_x);
-  --color-purple: var(--purple);
+  --color_purple_rgb: var(--magenta_x);
+  --color-purple: var(--magenta);
   --color_green_rgb: var(--green_x);
   --color-green: var(--green);
   --color_cyan_rgb: var(--cyan_x);
@@ -235,6 +230,22 @@
   --mermaid-actor: var(--fg_dark);
   --mermaid-loopline: var(--blue);
 
+  --blockquote-background-color: var(--bg_dark);
+  --callout-default: var(--blue_x);
+  --callout-info: var(--blue_x);
+  --callout-summary: var(--cyan_x);
+  --callout-tip: var(--cyan_x);
+  --callout-todo: var(--cyan_x);
+  --callout-bug: var(--red_x);
+  --callout-error: var(--red1_x);
+  --callout-fail: var(--red1_x);
+  --callout-example: var(--magenta_x);
+  --callout-important: var(--green_x);
+  --callout-success: var(--teal_x);
+  --callout-question: var(--yellow_x);
+  --callout-warning: var(--orange_x);
+  --callout-quote: var(--fg_dark_x);
+
   --icon-color-hover: var(--blue);
   --icon-color-focused: var(--magenta);
   --icon-color-active: var(--magenta);
@@ -260,9 +271,6 @@
   --modal-border-color: var(--bg_highlight);
   --prompt-border-color: var(--bg_highlight);
   --slider-track-background: var(--bg_highlight);
-
-  --blockquote-background-color: var(--bg_dark);
-  --callout-quote: var(--fg_dark);
 
   --embed-background: var(--bg_dark);
   --embed-padding: 1.5rem 1.5rem 0.5rem;
@@ -369,6 +377,7 @@ mjx-math {
 .cm-atom {
   color: var(--blue);
 }
+
 span.cm-hmd-frontmatter.cm-meta {
   color: rgba(var(--blue0_x), 0.9);
 }

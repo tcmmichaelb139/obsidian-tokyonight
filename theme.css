@@ -269,10 +269,15 @@
 
 /* Headings (credit: https://github.com/Akifyss/obsidian-border)*/
 
+body:not(.heading-indicator-off) .markdown-rendered>:is(h1, h2, h3, h4, h5, h6),
+body:not(.heading-indicator-off) .markdown-preview-sizer>div>:is(h1, h2, h3, h4, h5, h6) {
+  position: relative;
+}
+
 body.h1-divider-on :is(.markdown-preview-sizer>div>h1, .markdown-rendered>h1, .HyperMD-header-1)::after {
   content: "";
   position: absolute;
-  height: 1.5px;
+  height: 2px;
   width: 100%;
   right: 0px;
   opacity: 0.5;
@@ -283,7 +288,7 @@ body.h1-divider-on :is(.markdown-preview-sizer>div>h1, .markdown-rendered>h1, .H
 body.h2-divider-on :is(.markdown-preview-sizer>div>h2, .markdown-rendered>h2, .HyperMD-header-2)::after {
   content: "";
   position: absolute;
-  height: 1.5px;
+  height: 1px;
   width: 100%;
   right: 0px;
   opacity: 0.5;

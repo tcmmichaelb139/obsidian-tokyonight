@@ -280,7 +280,7 @@ body.h1-divider-on :is(.markdown-preview-sizer>div>h1, .markdown-rendered>h1, .H
   background-image: linear-gradient(to left, var(--h1-color) 30%, transparent 70%);
 }
 
-body.h2-divider-on :is(.markdown-preview-sizer>div>h2, .markdown-rendered>h2, .HyperMD-header-1)::after {
+body.h2-divider-on :is(.markdown-preview-sizer>div>h2, .markdown-rendered>h2, .HyperMD-header-2)::after {
   content: "";
   position: absolute;
   height: 1.5px;
@@ -291,7 +291,7 @@ body.h2-divider-on :is(.markdown-preview-sizer>div>h2, .markdown-rendered>h2, .H
   background-image: linear-gradient(to left, var(--h2-color) 30%, transparent 70%);
 }
 
-body.h3-divider-on :is(.markdown-preview-sizer>div>h3, .markdown-rendered>h3, .HyperMD-header-1)::after {
+body.h3-divider-on :is(.markdown-preview-sizer>div>h3, .markdown-rendered>h3, .HyperMD-header-3)::after {
   content: "";
   position: absolute;
   height: 1.5px;
@@ -302,7 +302,7 @@ body.h3-divider-on :is(.markdown-preview-sizer>div>h3, .markdown-rendered>h3, .H
   background-image: linear-gradient(to left, var(--h3-color) 30%, transparent 70%);
 }
 
-body.h4-divider-on :is(.markdown-preview-sizer>div>h4, .markdown-rendered>h4, .HyperMD-header-1)::after {
+body.h4-divider-on :is(.markdown-preview-sizer>div>h4, .markdown-rendered>h4, .HyperMD-header-4)::after {
   content: "";
   position: absolute;
   height: 1.5px;
@@ -313,7 +313,7 @@ body.h4-divider-on :is(.markdown-preview-sizer>div>h4, .markdown-rendered>h4, .H
   background-image: linear-gradient(to left, var(--h4-color) 30%, transparent 70%);
 }
 
-body.h5-divider-on :is(.markdown-preview-sizer>div>h5, .markdown-rendered>h5, .HyperMD-header-1)::after {
+body.h5-divider-on :is(.markdown-preview-sizer>div>h5, .markdown-rendered>h5, .HyperMD-header-5)::after {
   content: "";
   position: absolute;
   height: 1.5px;
@@ -324,7 +324,7 @@ body.h5-divider-on :is(.markdown-preview-sizer>div>h5, .markdown-rendered>h5, .H
   background-image: linear-gradient(to left, var(--h5-color) 30%, transparent 70%);
 }
 
-body.h6-divider-on :is(.markdown-preview-sizer>div>h6, .markdown-rendered>h6, .HyperMD-header-1)::after {
+body.h6-divider-on :is(.markdown-preview-sizer>div>h6, .markdown-rendered>h6, .HyperMD-header-6)::after {
   content: "";
   position: absolute;
   height: 1.5px;
@@ -684,6 +684,145 @@ settings:
     opacity: false 
     default-light: 'rgb(188, 189, 194)' 
     default-dark: 'rgb(15, 15, 20)' 
+  - 
+    id: foreground-header 
+    title: Foreground  
+    type: heading 
+    level: 2
+    collapsed: true 
+  - 
+    id: text-color-heading 
+    title: Text / Icon Color 
+    type: heading 
+    level: 3 
+    collapsed: true 
+  - 
+    id: text-normal 
+    title: Text Normal 
+    type: variable-themed-color 
+    format: hex
+    opacity: false  
+    default-light: '#'
+    default-dark: '#'
+  - 
+    id: text-muted 
+    title: Text Muted 
+    type: variable-themed-color 
+    format: hex
+    opacity: false  
+    default-light: '#'
+    default-dark: '#'
+  - 
+    id: text-faint 
+    title: Text Faint 
+    type: variable-themed-color 
+    format: hex
+    opacity: false  
+    default-light: '#'
+    default-dark: '#'
+  -   
+    id: text-accent 
+    title: Text Accent 
+    type: variable-themed-color 
+    format: hex 
+    opacity: false 
+    default-light: '#' 
+    default-dark: '#' 
+  - 
+    id: text-accent-hover 
+    title: Text Accent Hover 
+    type: variable-themed-color 
+    format: hex 
+    opacity: false 
+    default-light: '#'
+    default-dark: '#'
+  - 
+    id: text-on-accent 
+    title: Text on Accent 
+    type: variable-themed-color 
+    format: hex 
+    opacity: false 
+    default-light: '#'
+    default-dark: '#'
+  - 
+    id: text-on-accent-inverted 
+    title: Text on Accent Inverted 
+    type: variable-themed-color 
+    format: hex 
+    opacity: false
+    default-light: '#'
+    default-dark: '#'
+  - 
+    id: text-error 
+    title: Text Error 
+    type: variable-themed-color 
+    format: hex 
+    opacity: false 
+    default-light: '#'
+    default-dark: '#'
+  - 
+    id: text-warning 
+    title: Text Warning 
+    type: variable-themed-color 
+    format: hex 
+    opacity: false 
+    default-light: '#'
+    default-dark: '#'
+  - 
+    id: text-success 
+    title: Text Success 
+    type: variable-themed-color 
+    format: hex 
+    opacity: false 
+    default-light: '#'
+    default-dark: '#'
+  - 
+    id: interactive-heading 
+    title: Interactive color 
+    type: heading 
+    level: 3 
+    collapsed: true 
+  - 
+    id: interactive-normal 
+    title: Interactive Normal 
+    type: variable-themed-color 
+    format: hex 
+    opacity: false 
+    default-light: '#'
+    default-dark: '#'
+  - 
+    id: interactive-hover 
+    title: Interactive Hover 
+    type: variable-themed-color 
+    format: hex 
+    opacity: false 
+    default-light: '#'
+    default-dark: '#'
+  - 
+    id: interactive-accent
+    title: Interactive Accent 
+    type: variable-themed-color 
+    format: hex 
+    opacity: false 
+    default-light: '#' 
+    default-dark: '#' 
+  - 
+    id: interactive-accent-hover 
+    title: Interactive Accent Hover 
+    type: variable-themed-color 
+    format: hex 
+    opacity: false 
+    default-light: '#'
+    default-dark: '#'
+  - 
+    id: interactive-accent-hsl
+    title: Interactive Accent HSL 
+    type: variable-themed-color 
+    format: hex
+    opacity: false 
+    default-light: '#'
+    default-dark: '#'
+  -
 */
 
 /* @settings

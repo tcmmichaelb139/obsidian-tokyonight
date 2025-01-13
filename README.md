@@ -14,13 +14,13 @@ Import the styles into Style Settings for Storm and Moon. Both the Night and Lig
 
 ## Storm
 
-![Storm Style Settings Configuration](./variants/tokyonight-storm.json)
+[Storm Style Settings Configuration](./variants/tokyonight-storm.json)
 
 ![](./assets/tokyonight-storm.png)
 
 ## Moon
 
-![Moon Style Setting Configuration](./variants/tokyonight-moon.json)
+[Moon Style Setting Configuration](./variants/tokyonight-moon.json)
 
 ![](./assets/tokyonight-moon.png)
 

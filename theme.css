@@ -536,6 +536,10 @@ body:not(.table-width-obsidian-default) :is(.markdown-rendered, .markdown-source
   background-color: var(--bg_highlight);
 }
 
+.ͼ1 .cm-placeholder {
+  color: var(--comment);
+}
+
 /* various-complement */
 .various-complements__suggestion-item::before {
   filter: var(--link-external-filter);

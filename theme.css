@@ -165,7 +165,7 @@
   --text-error-hover: var(--red);
   --text-selection: var(--unknown);
   --text-on-accent: var(--bg);
-  --text-highlight-bg: rgba(var(--orange_x), 0.4);
+  --text-highlight-bg: rgba(var(--orange_x), 0.25);
   --text-selection: rgba(var(--blue0_x), 0.6);
   --bold-color: var(--cyan);
   --italic-color: var(--cyan);
@@ -822,6 +822,15 @@ body:not(.disable-alternative-checkboxes) li[data-task="<"]>p>input:checked {
   border-left: 1px solid var(--divider-color);
 }
 
+/* printing */
+
+@media print {
+  .theme-light {
+    --blockquote-background-color: rgba(var(--bg_dark_x), 0.25);
+    --code-background: rgba(var(--bg_highlight_dark_x), 0.25);
+    --table-header-background: rgba(var(--bg_dark2_x), 0.25);
+  }
+}
 
 /* @settings
 

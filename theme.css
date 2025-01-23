@@ -929,7 +929,7 @@ settings:
     opacity: false 
     default-light: 'rgb(109, 74, 120)'
     default-dark: 'rgb(217, 0, 105)'
-  -  
+  - 
     id: Background-colors 
     title: Background Colors 
     type: heading 
@@ -942,7 +942,7 @@ settings:
     format: rgb 
     opacity: false 
     default-light: 'rgb(213, 214, 219)' 
-    default-dark: 'rgb(26, 27, 38)'  
+    default-dark: 'rgb(26, 27, 38)' 
   - 
     id: bg_dark 
     title: Background Dark 
@@ -962,7 +962,7 @@ settings:
   -  
     id: bg_highlight_dark 
     title: Background Highlight Dark 
-    description: 'Used for code bg
+    description: 'Used for code bg'
     type: variable-themed-color 
     format: rgb 
     opacity: false 

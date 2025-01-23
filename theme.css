@@ -41,6 +41,9 @@
   --magent_hsl: 261 85% 79%;
   --magenta_x: 187, 154, 247;
   --magenta: rgb(var(--magenta_x));
+  --pink_hsl: 331 100% 43%;
+  --pink_x: 217, 0, 105;
+  --pink: rgb(var(--pink_x));
   --orange_x: 255, 158, 100;
   --orange: rgb(var(--orange_x));
   --yellow_x: 224, 175, 104;
@@ -94,6 +97,9 @@
   --magent_hsl: 261 24% 38%;
   --magenta_x: 90, 74, 120;
   --magenta: rgb(var(--magenta_x));
+  --pink_hsl: 286 24% 38%;
+  --pink_x: 109, 74, 120;
+  --pink: rgb(var(--pink_x));
   --orange_x: 150, 80, 39;
   --orange: rgb(var(--orange_x));
   --yellow_x: 143, 94, 21;
@@ -414,9 +420,14 @@ body:not(.table-width-obsidian-default) :is(.markdown-rendered, .markdown-source
 }
 
 /* callouts */
-.callout[data-callout="quote"],
-.callout[data-callout="cite"] {
+.callout[data-callout="quote"] {
   background-color: rgba(var(--bg_highlight_dark_x), 0.5);
+}
+
+
+.callout[data-callout="cite"] {
+  --callout-color: var(--pink_x);
+  background-color: rgba(var(--pink_x), 0.15);
 }
 
 /* the following callouts are from Border (https://github.com/Akifyss/obsidian-border/blob/18607ee208d56e1d4faff7419efb9cf7c9cc726e/theme.css#L7710C1-L7799C2) */
@@ -901,6 +912,14 @@ settings:
     opacity: false 
     default-light: 'rgb(90, 74, 120)' 
     default-dark: 'rgb(187, 154, 247)' 
+  - 
+    id: pink 
+    title: Pink 
+    type: variable-themed-color 
+    format: rgb 
+    opacity: false 
+    default-light: 'rgb(109, 74, 120)'
+    default-dark: 'rgb(217, 0, 105)'
   -  
     id: Background-colors 
     title: Background Colors 
@@ -934,7 +953,7 @@ settings:
   -  
     id: bg_highlight_dark 
     title: Background Highlight Dark 
-    description: 'Used for code bg and cite callout color'
+    description: 'Used for code bg
     type: variable-themed-color 
     format: rgb 
     opacity: false 

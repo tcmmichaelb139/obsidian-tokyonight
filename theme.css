@@ -267,6 +267,8 @@
   --canvas-color: var(--bg_highlight_x);
 
   --toggle-thumb-color: var(--bg);
+
+  --image-radius: 0px;
 }
 
 
@@ -384,6 +386,12 @@ a.external-link::after {
   padding-left: 2.5px;
   bottom: -1px;
   position: relative;
+}
+
+/* Images  */
+
+.image-embed {
+  border-radius: var(--image-radius);
 }
 
 /* tables credit: Akifyss/border */
@@ -1585,7 +1593,7 @@ settings:
     default-light: '#'
     default-dark: '#'
   - 
-    id: code-heading 
+    id: code-headigeng 
     title: Code 
     type: heading  
     level: 2 
@@ -2021,4 +2029,16 @@ settings:
     type: variable-text
     default: ''
   - 
+    id: image-heading 
+    title: Image Background 
+    type: heading 
+    level: 2
+    collapsed: true 
+  - 
+    id: image-radius 
+    title: Image Radius 
+    description: Any CSS border-radius value 
+    type: variable-text 
+    default: ''
+  -
 */

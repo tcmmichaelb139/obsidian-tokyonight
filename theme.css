@@ -5,6 +5,7 @@
 }
 
 .theme-dark {
+  color-scheme: dark;
   /* --accent-h: 261; /* magenta */
   /* --accent-s: 85%; */
   /* --accent-l: 79%; */
@@ -555,10 +556,6 @@ body:not(.table-width-obsidian-default) :is(.markdown-rendered, .markdown-source
   background-color: var(--bg_highlight);
 }
 
-.ͼ1 .cm-placeholder {
-  color: var(--comment);
-}
-
 /* various-complement */
 .various-complements__suggestion-item::before {
   filter: var(--link-external-filter);
@@ -583,9 +580,6 @@ span.cm-hmd-frontmatter.cm-meta {
 }
 
 /* checkboxes (credit: border) */
-
-
-
 
 body:not(.disable-alternative-checkboxes) input[data-task="<"]:checked,
 body:not(.disable-alternative-checkboxes) li[data-task="<"]>input:checked,

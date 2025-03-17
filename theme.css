@@ -270,6 +270,9 @@
   --toggle-thumb-color: var(--bg);
 
   --image-radius: 0px;
+
+  --date-color: var(--blue);
+  --date-background-color: var(--bg_highlight);
 }
 
 
@@ -1535,7 +1538,6 @@ settings:
   - 
     id: Tags
     title: Tags
-    title.zh: 标签
     type: heading
     collapsed: true
     level: 2
@@ -1560,6 +1562,26 @@ settings:
 		title: Tag background color (hover)
 		type: variable-themed-color
 		opacity: true
+		format: hex
+		default-light: '#'
+		default-dark: '#'
+  - 
+    id: Dates 
+    title: Dates 
+    type: heading 
+    collapsed: true 
+    level: 2
+  - 
+    id: date-color 
+		title: Tag text color
+		type: variable-themed-color
+		format: hex
+		default-light: '#'
+		default-dark: '#'
+  - 
+		id: date-background-color
+		title: Date background color
+		type: variable-themed-color
 		format: hex
 		default-light: '#'
 		default-dark: '#'

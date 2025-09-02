@@ -28,6 +28,32 @@ Import the styles into Style Settings for Storm and Moon. Both the Night and Lig
 
 ![](./assets/tokyonight-night.png)
 
+# Checkbox Styling 
+
+![](./assets/symbols.png)
+
+```
+- [ ] to-do
+- [/] incomplete
+- [x] done
+- [-] canceled
+- [x] forwarded
+- [<] scheduling
+- [?] question
+- [!] important
+- [*] star
+- ["] quote
+- [l] location
+- [b] bookmark
+- [i] information
+- [S] savings
+- [I] idea
+- [p] pros
+- [c] cons
+- [u] up
+- [d] down
+```
+
 ## Credit 
 
 - [tokyonight.nvim](https://github.com/folke/tokyonight.nvim) and [VSCode Tokyonight](https://github.com/enkia/tokyo-night-vscode-theme) for the wonderful theme colors.

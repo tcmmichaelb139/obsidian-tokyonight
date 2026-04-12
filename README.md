@@ -6,9 +6,9 @@ A tokyonight theme for [Obsidian](https://obsidian.md). Colors from [tokyonight.
 
 ## Table of Content
 
-[Versions](#versions)
-[Checkbox Styling](#checkbox-styling)
-[Installation](#installation)
+- [Versions](#versions)
+- [Checkbox Styling](#checkbox-styling)
+- [Installation](#installation)
 
 ## Versions
 

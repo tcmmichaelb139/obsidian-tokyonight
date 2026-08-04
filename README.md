@@ -37,7 +37,7 @@ Import the styles into Style Settings for Storm and Moon. Both the Night and Lig
 - [/] incomplete
 - [x] done
 - [-] canceled
-- [x] forwarded
+- [>] forwarded
 - [<] scheduling
 - [?] question
 - [!] important

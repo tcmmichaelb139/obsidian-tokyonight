@@ -221,20 +221,20 @@
   --mermaid-loopline: var(--blue);
 
   --blockquote-background-color: var(--bg_dark);
-  --callout-default: var(--blue_x);
-  --callout-info: var(--blue_x);
-  --callout-summary: var(--cyan_x);
-  --callout-tip: var(--cyan_x);
-  --callout-todo: var(--cyan_x);
-  --callout-bug: var(--red_x);
-  --callout-error: var(--red1_x);
-  --callout-fail: var(--red1_x);
-  --callout-example: var(--magenta_x);
-  --callout-important: var(--green_x);
-  --callout-success: var(--teal_x);
-  --callout-question: var(--yellow_x);
-  --callout-warning: var(--orange_x);
-  --callout-quote: var(--fg_dark_x);
+  --callout-default: var(--blue);
+  --callout-info: var(--blue);
+  --callout-summary: var(--cyan);
+  --callout-tip: var(--cyan);
+  --callout-todo: var(--cyan);
+  --callout-bug: var(--red);
+  --callout-error: var(--red1);
+  --callout-fail: var(--red1);
+  --callout-example: var(--magenta);
+  --callout-important: var(--green);
+  --callout-success: var(--teal);
+  --callout-question: var(--yellow);
+  --callout-warning: var(--orange);
+  --callout-quote: var(--fg_dark);
 
   --icon-color-hover: var(--blue);
   --icon-color-focused: var(--magenta);

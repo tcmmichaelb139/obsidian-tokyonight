@@ -20,8 +20,8 @@
   --bg_dark: rgb(var(--bg_dark_x));
   --bg_x: 26, 27, 38;
   --bg: rgb(var(--bg_x));
-  --bg_highlight_x: 41, 46, 66;
-  --bg_highlight: rgb(var(--bg_highlight_x));
+  --bg_highlight_x: rgb(41, 46, 66);
+  --bg_highlight: var(--bg_highlight_x);
   --bg_highlight_dark_x: 36, 40, 59;
   --bg_highlight_dark: rgb(var(--bg_highlight_dark_x));
   --terminal_black_x: 65, 72, 104;
@@ -77,8 +77,8 @@
   --bg_dark: rgb(var(--bg_dark_x));
   --bg_x: 213, 214, 219;
   --bg: rgb(var(--bg_x));
-  --bg_highlight_x: 220, 222, 226;
-  --bg_highlight: rgb(var(--bg_highlight_x));
+  --bg_highlight_x: rgb(220, 222, 226);
+  --bg_highlight: var(--bg_highlight_x);
   --bg_highlight_dark_x: 195, 197, 201;
   --bg_highlight_dark: rgb(var(--bg_highlight_dark_x));
   --terminal_black_x: 15, 15, 20;
@@ -153,7 +153,7 @@
   --background-modifier-error-hover: var(--red);
   --background-modifier-cover: rgba(var(--bg_dark_x), 0.8);
   --background-modifier-hover: var(--bg_highlight);
-  --background-modifier-message: rgba(var(--bg_highlight_x), 0.9);
+  --background-modifier-message: color-mix(in srgb, var(--bg_highlight_x) 90%, transparent);
   --background-modifier-active-hover: var(--bg_highlight);
 
   --text-normal: var(--fg);

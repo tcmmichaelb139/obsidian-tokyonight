@@ -390,18 +390,35 @@ body.h6-divider-on :is(.markdown-preview-sizer>div>h6, .markdown-rendered>h6, .H
   filter: var(--link-external-filter) !important;
 }
 
+/* the icon is inlined because Obsidian's bundled svg paths change between versions.
+   it's on ::after so --link-external-filter tints the icon but not the link text */
 a.external-link {
   filter: none;
-  background-image: unset;
-  padding-right: 0;
+  background-image: none;
+  padding-inline-end: 0;
+}
+
+:dir(rtl) a.external-link {
+  background-image: none;
 }
 
 a.external-link::after {
-  content: url(public/images/874d8b8e340f75575caa.svg);
+  content: "";
+  display: inline-block;
+  width: 0.825em;
+  height: 0.825em;
+  margin-inline-start: 2.5px;
+  background: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32' fill='none' stroke='%23888888' stroke-linecap='round' stroke-linejoin='round' stroke-width='3'><path d='M14 9 L3 9 3 29 23 29 23 18 M18 4 L28 4 28 14 M28 4 L14 18'/></svg>") center / contain no-repeat;
   filter: var(--link-external-filter);
-  padding-left: 2.5px;
-  bottom: -1px;
-  position: relative;
+}
+
+:dir(rtl) a.external-link::after {
+  transform: scaleX(-1);
+}
+
+.print a.external-link::after,
+.webviewer-content .markdown-preview-view a.external-link::after {
+  display: none;
 }
 
 /* Images  */
@@ -816,6 +833,9 @@ body:not(.disable-alternative-checkboxes) li[data-task="<"]>p>input:checked {
   -webkit-mask-image: url('data:image/svg+xml;utf8,<?xml version="1.0" encoding="UTF-8"?><svg id="svg0" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16"><defs><style>.cls-1{fill:none;}</style></defs><rect class="cls-1" width="16" height="16"/><path d="M2.75,15.5H13.25c.83,0,1.5-.67,1.5-1.5V3.5c0-.83-.67-1.5-1.5-1.5h-1.5V.5h-1.5v1.5H5.75V.5h-1.5v1.5h-1.5c-.83,0-1.5,.67-1.5,1.5V14c0,.83,.67,1.5,1.5,1.5Zm0-11.25H13.25v1.5H2.75v-1.5Z"/></svg>');
 }
 
+body.disable-checkbox-strikethrough {
+  --checklist-done-decoration: none;
+}
 
 /* style settings */
 
@@ -1379,8 +1399,23 @@ settings:
     opacity: false 
     default-light: '#'
     default-dark: '#'
-  - 
-    id: text-heading 
+  -
+    id: inline-title-heading
+    title: Inline Title
+    type: heading
+    level: 2
+    collapsed: true
+  -
+    id: inline-title-color
+    title: Inline Title Color
+    description: Defaults to the H1 color
+    type: variable-themed-color
+    format: rgb
+    opacity: false
+    default-light: '#'
+    default-dark: '#'
+  -
+    id: text-heading
     title: Text 
     type: heading  
     level: 1 
@@ -1789,8 +1824,14 @@ settings:
     description: Enable this if you are using your own implementation via a CSS Snippet.
     default: false
     type: class-toggle
-  - 
-    id: checkbox-radius 
+  -
+    id: disable-checkbox-strikethrough
+    title: Disable Checkbox Strikethrough
+    description: Stop crossing out the text of completed tasks.
+    default: false
+    type: class-toggle
+  -
+    id: checkbox-radius
     title: Checkbox Radius 
     description: Any CSS border-radius value
     type: variable-text

@@ -6,7 +6,12 @@ A tokyonight theme for [Obsidian](https://obsidian.md). Colors from [tokyonight.
 
 # Versions
 
-Import the styles into Style Settings for Storm and Moon. Both the Night and Light themes are the default.
+Night and Light are the defaults. Storm and Moon are [Style Settings](https://github.com/mgmeyers/obsidian-style-settings) configurations, so they don't appear as options you can select. To use one:
+
+1. Download the configuration file linked under [Storm](#storm) or [Moon](#moon).
+2. In Obsidian, go to **Settings > Style Settings > Import** and choose **Import from file**.
+
+The colors change right away. Imports are merged into your current settings, so to switch variants or go back to Night, first click **Reset all settings to default** on the **Appearance** heading in Style Settings. This also clears any other custom colors in that section.
 
 ## Light
 
